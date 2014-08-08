@@ -1,0 +1,19 @@
+{
+	"name" : "PixiDisplay",
+	"version" : "0.0.1",
+	"description" : "Renderer plugin for CloudKid Framework",
+	"url" : "http://github.com/CloudKidStudio/PixiDisplay",
+	"output" : "cloudkid-pixi-display",
+	"main" : [
+		"src/PixiDisplay.js",
+		"src/Animator.js",
+		"src/Button.js",
+		"src/DragManager.js",
+		"src/AssetManager.js",
+		"src/scaling/Positioner.js",
+		"src/scaling/ScreenSettings.js",
+		"src/scaling/UIElement.js",
+		"src/scaling/UIElementSettings.js",
+		"src/scaling/UIScaler.js"
+	]
+}

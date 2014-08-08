@@ -1,0 +1,16 @@
+{
+	"name": "cloudkid-pixijs-display",
+	"version": "0.0.1",
+	"main": "dist/cloudkid-pixi-display.min.js",
+	"dependencies": {
+		"cloudkid-framework": "*",
+		"easeljs": "https://github.com/CloudKidStudio/pixi.js.git"
+	},
+	"ignore": [
+		"Gruntfile.js",
+		"build.json",
+		"example",
+		"docs",
+		"src"
+	]
+}
