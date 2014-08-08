@@ -1,0 +1,2888 @@
+{
+    "project": {
+        "name": "PixiDisplay",
+        "description": "Renderer plugin for CloudKid Framework",
+        "version": "0.0.1",
+        "url": "http://github.com/CloudKidStudio/PixiDisplay"
+    },
+    "files": {
+        "src/scaling/Positioner.js": {
+            "name": "src/scaling/Positioner.js",
+            "modules": {
+                "cloudkid": 1
+            },
+            "classes": {
+                "Positioner": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/scaling/ScreenSettings.js": {
+            "name": "src/scaling/ScreenSettings.js",
+            "modules": {},
+            "classes": {
+                "ScreenSettings": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/scaling/UIElement.js": {
+            "name": "src/scaling/UIElement.js",
+            "modules": {},
+            "classes": {
+                "UIElement": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/scaling/UIElementSettings.js": {
+            "name": "src/scaling/UIElementSettings.js",
+            "modules": {},
+            "classes": {
+                "UIElementSettings": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/scaling/UIScaler.js": {
+            "name": "src/scaling/UIScaler.js",
+            "modules": {},
+            "classes": {
+                "UIScaler": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Animator.js": {
+            "name": "src/Animator.js",
+            "modules": {},
+            "classes": {
+                "Animator": 1,
+                "Animator.AnimTimeline": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/AssetManager.js": {
+            "name": "src/AssetManager.js",
+            "modules": {},
+            "classes": {
+                "AssetManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Button.js": {
+            "name": "src/Button.js",
+            "modules": {},
+            "classes": {
+                "Button": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/DragManager.js": {
+            "name": "src/DragManager.js",
+            "modules": {},
+            "classes": {
+                "DragManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/PixiDisplay.js": {
+            "name": "src/PixiDisplay.js",
+            "modules": {},
+            "classes": {
+                "PixiDisplay": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "cloudkid": {
+            "name": "cloudkid",
+            "submodules": {},
+            "classes": {
+                "Positioner": 1,
+                "ScreenSettings": 1,
+                "UIElement": 1,
+                "UIElementSettings": 1,
+                "UIScaler": 1,
+                "Animator": 1,
+                "Animator.AnimTimeline": 1,
+                "AssetManager": 1,
+                "Button": 1,
+                "DragManager": 1,
+                "PixiDisplay": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/PixiDisplay.js",
+            "line": 8,
+            "description": "Initially layouts all interface elements",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "width",
+                    "description": "The screen width in pixels",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "The screen height in pixels",
+                    "type": "Number"
+                },
+                {
+                    "name": "ppi",
+                    "description": "The screen pixel density (PPI)",
+                    "type": "Number"
+                }
+            ]
+        }
+    },
+    "classes": {
+        "Positioner": {
+            "name": "Positioner",
+            "shortname": "Positioner",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/scaling/Positioner.js",
+            "line": 5,
+            "description": "Initially layouts all interface elements"
+        },
+        "ScreenSettings": {
+            "name": "ScreenSettings",
+            "shortname": "ScreenSettings",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/scaling/ScreenSettings.js",
+            "line": 5,
+            "description": "Object that contains the screen settings to help scaling"
+        },
+        "UIElement": {
+            "name": "UIElement",
+            "shortname": "UIElement",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/scaling/UIElement.js",
+            "line": 8,
+            "description": "A single UI item that needs to be resized"
+        },
+        "UIElementSettings": {
+            "name": "UIElementSettings",
+            "shortname": "UIElementSettings",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/scaling/UIElementSettings.js",
+            "line": 5,
+            "description": "The UI Item Settings which is the positioning settings used to adjust each element"
+        },
+        "UIScaler": {
+            "name": "UIScaler",
+            "shortname": "UIScaler",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/scaling/UIScaler.js",
+            "line": 10,
+            "description": "The UI scale is responsible for scaling UI components\nto help easy the burden of different device aspect ratios"
+        },
+        "Animator": {
+            "name": "Animator",
+            "shortname": "Animator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/Animator.js",
+            "line": 8,
+            "description": "[PIXI Only] Animator for interacting with Spine animations",
+            "static": 1
+        },
+        "Animator.AnimTimeline": {
+            "name": "Animator.AnimTimeline",
+            "shortname": "Animator.AnimTimeline",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/Animator.js",
+            "line": 458,
+            "description": "Internal Animator class for keeping track of animations. AnimTimelines are pooled internally,\nso please only keep references to them while they are actively playing an animation.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "clip",
+                    "description": "The AnimTimeline's clip",
+                    "type": "PIXI.MovieClip|Pixi.Spine"
+                },
+                {
+                    "name": "callback",
+                    "description": "The function to call when the clip is finished playing",
+                    "type": "Function"
+                },
+                {
+                    "name": "speed",
+                    "description": "The speed at which the clip should be played",
+                    "type": "Int"
+                }
+            ]
+        },
+        "AssetManager": {
+            "name": "AssetManager",
+            "shortname": "AssetManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/AssetManager.js",
+            "line": 8,
+            "description": "AssetManager is responsible for managing different resolutions of assets and spritesheets\nbased on the resolution of the stage. This is a helpful optimization for PIXI because some low-hardware\ndevices have a problem keeping up with larger images, or just refuse large images entirely.\nThe AssetManager does not load assets itself, or keep track of what is loaded. It merely assists in \nloading the appropriate assets, as well as easily unloading assets when you are done using them."
+        },
+        "Button": {
+            "name": "Button",
+            "shortname": "Button",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/Button.js",
+            "line": 8,
+            "description": "A Multipurpose button class. It is designed to have one image, and an optional text label.\nThe button can be a normal button or a selectable button.\nThe button functions similarly with both CreateJS and PIXI, but slightly differently in\ninitialization and callbacks.\nUse releaseCallback and overCallback to know about button clicks and mouse overs, respectively.",
+            "extends": "PIXI.DisplayObjectContainer",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "imageSettings",
+                    "description": "Information about the art to be used for button states, as well as if the button is selectable or not.",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "priority",
+                            "description": "The state priority order. If omitted, defaults to [\"disabled\", \"down\", \"over\", \"up\"].\n       Previous versions of Button used a hard coded order: [\"highlighted\", \"disabled\", \"down\", \"over\", \"selected\", \"up\"].",
+                            "type": "Array",
+                            "optional": true,
+                            "optdefault": "null"
+                        },
+                        {
+                            "name": "up",
+                            "description": "The texture for the up state of the button. This can be either the texture itself,\n       or an object with 'tex' and 'label' properties.",
+                            "type": "Object|PIXI.Texture",
+                            "optional": true,
+                            "props": [
+                                {
+                                    "name": "tex",
+                                    "description": "The sourceRect for the state within the image.",
+                                    "type": "PIXI.Texture",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "label",
+                                    "description": "Label information specific to this state. Properties on this parameter override data \n       in the label parameter for this button state only. All values except \"text\" and \"type\" from the label parameter may be overridden.",
+                                    "type": "Object",
+                                    "optional": true,
+                                    "optdefault": "null"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "over",
+                            "description": "The texture for the over state of the button. If omitted, uses the up state.",
+                            "type": "Object|PIXI.Texture",
+                            "optional": true,
+                            "optdefault": "null",
+                            "props": [
+                                {
+                                    "name": "tex",
+                                    "description": "The sourceRect for the state within the image.",
+                                    "type": "PIXI.Texture",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "label",
+                                    "description": "Label information specific to this state. Properties on this parameter override data \n       in the label parameter for this button state only. All values except \"text\" and \"type\" from the label parameter may be overridden.",
+                                    "type": "Object",
+                                    "optional": true,
+                                    "optdefault": "null"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "down",
+                            "description": "The texture for the down state of the button. If omitted, uses the up state.",
+                            "type": "Object|PIXI.Texture",
+                            "optional": true,
+                            "optdefault": "null",
+                            "props": [
+                                {
+                                    "name": "tex",
+                                    "description": "The sourceRect for the state within the image.",
+                                    "type": "PIXI.Texture",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "label",
+                                    "description": "Label information specific to this state. Properties on this parameter override data \n       in the label parameter for this button state only. All values except \"text\" and \"type\" from the label parameter may be overridden.",
+                                    "type": "Object",
+                                    "optional": true,
+                                    "optdefault": "null"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "disabled",
+                            "description": "The texture for the disabled state of the button. If omitted, uses the up state.",
+                            "type": "Object|PIXI.Texture",
+                            "optional": true,
+                            "optdefault": "null",
+                            "props": [
+                                {
+                                    "name": "tex",
+                                    "description": "The sourceRect for the state within the image.",
+                                    "type": "PIXI.Texture",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "label",
+                                    "description": "Label information specific to this state. Properties on this parameter override data \n       in the label parameter for this button state only. All values except \"text\" and \"type\" from the label parameter may be overridden.",
+                                    "type": "Object",
+                                    "optional": true,
+                                    "optdefault": "null"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "<yourCustomState>",
+                            "description": "The visual information about a custom state found in imageSettings.priority.\n       Any state added this way has a property of the same name added to the button. Examples of previous states that have been\n       moved to this system are \"selected\" and \"highlighted\".",
+                            "type": "Object|PIXI.Texture",
+                            "optional": true,
+                            "optdefault": "null",
+                            "props": [
+                                {
+                                    "name": "tex",
+                                    "description": "The texture for the custom state.",
+                                    "type": "PIXI.Texture",
+                                    "optional": true
+                                },
+                                {
+                                    "name": "label",
+                                    "description": "Label information specific to this state. Properties on this parameter \n       override data in the label parameter for this button state only. All values except \"text\" from the label parameter may be\n       overridden.",
+                                    "type": "Object",
+                                    "optional": true,
+                                    "optdefault": "null"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "origin",
+                            "description": "An optional offset for all button graphics, in case you want button \n       positioning to not include a highlight glow, or any other reason you would want to offset the button art and label.",
+                            "type": "PIXI.Point",
+                            "optional": true,
+                            "optdefault": "null"
+                        },
+                        {
+                            "name": "scale",
+                            "description": "The scale to use for the textures. This allows smaller art assets than the designed size to be used.",
+                            "type": "Number",
+                            "optional": true,
+                            "optdefault": "1"
+                        }
+                    ]
+                },
+                {
+                    "name": "label",
+                    "description": "Information about the text label on the button. Omitting this makes the button not use a label.",
+                    "type": "Object",
+                    "optional": true,
+                    "optdefault": "null",
+                    "props": [
+                        {
+                            "name": "type",
+                            "description": "If label.type is \"bitmap\", then a PIXI.BitmapText text is created, otherwise a PIXI.Text is created for the label.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "text",
+                            "description": "The text to display on the label.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "style",
+                            "description": "The style of the text field, in the format that PIXI.BitmapText and PIXI.Text expect.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "x",
+                            "description": "An x position to place the label text at relative to the button.",
+                            "type": "String|Number",
+                            "optional": true,
+                            "optdefault": "\"center\""
+                        },
+                        {
+                            "name": "y",
+                            "description": "A y position to place the label text at relative to the button. If omitted,\n       \"center\" is used, which attempts to vertically center the label on the button.",
+                            "type": "String|Number",
+                            "optional": true,
+                            "optdefault": "\"center\""
+                        }
+                    ]
+                },
+                {
+                    "name": "enabled",
+                    "description": "Whether or not the button is initially enabled.",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "true"
+                }
+            ]
+        },
+        "DragManager": {
+            "name": "DragManager",
+            "shortname": "DragManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/DragManager.js",
+            "line": 8,
+            "description": "Drag manager is responsible for handling the dragging of stage elements\nsupports click-n-stick and click-n-drag functionality.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "stage",
+                    "description": "The stage that this DragManager is monitoring.",
+                    "type": "PIXI.Stage"
+                },
+                {
+                    "name": "startCallback",
+                    "description": "The callback when when starting",
+                    "type": "Function"
+                },
+                {
+                    "name": "endCallback",
+                    "description": "The callback when ending",
+                    "type": "Function"
+                }
+            ]
+        },
+        "PixiDisplay": {
+            "name": "PixiDisplay",
+            "shortname": "PixiDisplay",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "cloudkid",
+            "namespace": "",
+            "file": "src/PixiDisplay.js",
+            "line": 8,
+            "description": "PixiDisplay is a display plugin for the CloudKid Framework \n\tthat uses the Pixi library for rendering.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "id",
+                    "description": "The id of the canvas element on the page to draw to.",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The setup data for the Pixi stage.",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "forceContext",
+                            "description": "If a specific renderer should be used instead of WebGL \n\t\t\t\t\tfalling back to Canvas. Use \"webgl\" or \"canvas2d\" to specify a renderer.",
+                            "type": "String",
+                            "optional": true,
+                            "optdefault": "null"
+                        },
+                        {
+                            "name": "clearView",
+                            "description": "If the stage should wipe the canvas between renders.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "backgroundColor",
+                            "description": "The background color of the stage (if it is not transparent).",
+                            "type": "Uint",
+                            "optional": true,
+                            "optdefault": "0x000000"
+                        },
+                        {
+                            "name": "transparent",
+                            "description": "If the stage should be transparent.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "preMultAlpha",
+                            "description": "If the WebGL renderer should draw with all images as pre-multiplied alpha.\n\t\t\t\tIn most cases, you probably do not want to set this option to true.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/scaling/Positioner.js",
+            "line": 15,
+            "description": "Initial position of all layout items",
+            "itemtype": "method",
+            "name": "positionItems",
+            "static": 1,
+            "params": [
+                {
+                    "name": "parent",
+                    "description": "",
+                    "type": "PIXI.DisplayObject"
+                },
+                {
+                    "name": "itemSettings",
+                    "description": "JSON format with position information",
+                    "type": "Object"
+                }
+            ],
+            "class": "Positioner",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/Positioner.js",
+            "line": 59,
+            "description": "Create the polygon hit area for interface elements",
+            "static": 1,
+            "itemtype": "method",
+            "name": "generateHitArea",
+            "params": [
+                {
+                    "name": "hitArea",
+                    "description": "One of the following: <br/>\n* An array of points for a polygon, e.g. \n\n\t\t[{x:0, y:0}, {x:0, y:20}, {x:20, y:0}]\n\n* An object describing a rectangle, e.g.\n\n\t\t{type:\"rect\", x:0, y:0, w:10, h:30}\n\n* An object describing an ellipse, where x and y are the center, e.g. \n\n\t\t{type:\"ellipse\", x:0, y:0, w:10, h:30}\n\n* An object describing a circle, where x and y are the center, e.g.\n\n\t\t{type:\"circle\", x:0, y:0, r:20}",
+                    "type": "Object|Array"
+                },
+                {
+                    "name": "scale=1",
+                    "description": "The size to scale hitArea by",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "A geometric shape object for hit testing, either a Polygon, Rectangle, Ellipse, or Circle,\n    depending on the hitArea object. The shape will have a contains() function for hit testing.",
+                "type": "Object"
+            },
+            "class": "Positioner",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/ScreenSettings.js",
+            "line": 16,
+            "description": "The screen width in pixels",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "class": "ScreenSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/ScreenSettings.js",
+            "line": 22,
+            "description": "The screen height in pixels",
+            "itemtype": "property",
+            "name": "height",
+            "type": "Number",
+            "class": "ScreenSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/ScreenSettings.js",
+            "line": 28,
+            "description": "The screen pixel density (PPI)",
+            "itemtype": "property",
+            "name": "ppi",
+            "type": "Number",
+            "class": "ScreenSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 75,
+            "description": "Original horizontal margin in pixels",
+            "itemtype": "property",
+            "name": "origMarginHori",
+            "type": "Number",
+            "default": "0",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 82,
+            "description": "Original vertical margin in pixels",
+            "itemtype": "property",
+            "name": "origMarginVert",
+            "type": "Number",
+            "default": "0",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 89,
+            "description": "Original width in pixels",
+            "itemtype": "property",
+            "name": "origWidth",
+            "type": "Number",
+            "default": "0",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 96,
+            "description": "Original X scale of the item",
+            "itemtype": "property",
+            "name": "origScaleX",
+            "type": "Number",
+            "default": "0",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 103,
+            "description": "The original Y scale of the item",
+            "itemtype": "property",
+            "name": "origScaleY",
+            "type": "Number",
+            "default": "0",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 110,
+            "description": "The original bounds of the item with x, y, right, bottom, width, height properties.\nUsed to determine the distance to each edge of the item from its origin",
+            "itemtype": "property",
+            "name": "origBounds",
+            "type": "Object",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 117,
+            "description": "The reference to the scale settings",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_settings",
+            "type": "UIElementSettings",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 124,
+            "description": "The reference to the interface item we're scaling",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_item",
+            "type": "createjs.DisplayObject|PIXI.DisplayObject",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 131,
+            "description": "The original screen the item was designed for",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_designedScreen",
+            "type": "ScreenSettings",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 138,
+            "description": "Adjust the item scale and position, to reflect new screen",
+            "itemtype": "method",
+            "name": "resize",
+            "params": [
+                {
+                    "name": "newScreen",
+                    "description": "The current screen settings",
+                    "type": "ScreenSettings"
+                }
+            ],
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElement.js",
+            "line": 238,
+            "description": "Destroy this item, don't use after this",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "UIElement",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElementSettings.js",
+            "line": 15,
+            "description": "What vertical screen location the item should be aligned to: \"top\", \"center\", \"bottom\"",
+            "itemtype": "property",
+            "name": "vertAlign",
+            "type": "String",
+            "class": "UIElementSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElementSettings.js",
+            "line": 21,
+            "description": "What horizontal screen location the item should be aligned to: \"left\", \"center\", \"right\"",
+            "itemtype": "property",
+            "name": "horiAlign",
+            "type": "String",
+            "class": "UIElementSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElementSettings.js",
+            "line": 27,
+            "description": "If this element should be aligned to the title safe area, not the actual screen",
+            "itemtype": "property",
+            "name": "titleSafe",
+            "type": "Boolean",
+            "default": "false",
+            "class": "UIElementSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElementSettings.js",
+            "line": 34,
+            "description": "Maximum scale allowed in physical size",
+            "itemtype": "property",
+            "name": "maxScale",
+            "type": "Number",
+            "default": "1",
+            "class": "UIElementSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElementSettings.js",
+            "line": 41,
+            "description": "Minimum scale allowed in physical size",
+            "itemtype": "property",
+            "name": "minScale",
+            "type": "Number",
+            "default": "1",
+            "class": "UIElementSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIElementSettings.js",
+            "line": 48,
+            "description": "If the UI element is centered horizontally",
+            "itemtype": "property",
+            "name": "centeredHorizontally",
+            "type": "Boolean",
+            "default": "false",
+            "class": "UIElementSettings",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 32,
+            "description": "The current screen settings",
+            "itemtype": "property",
+            "name": "currentScreen",
+            "type": "ScreenSettings",
+            "static": 1,
+            "access": "private",
+            "tagname": "",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 40,
+            "description": "If the screensize has been set",
+            "itemtype": "property",
+            "name": "initialized",
+            "type": "Boolean",
+            "static": 1,
+            "access": "private",
+            "tagname": "",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 48,
+            "description": "The UI display object to update",
+            "itemtype": "property",
+            "name": "_parent",
+            "type": "PIXI.DisplayObject",
+            "access": "private",
+            "tagname": "",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 55,
+            "description": "The screen settings object, contains information about designed size",
+            "itemtype": "property",
+            "name": "_designedScreen",
+            "type": "ScreenSettings",
+            "access": "private",
+            "tagname": "",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 62,
+            "description": "The configuration for each items",
+            "itemtype": "property",
+            "name": "_items",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 69,
+            "description": "Vertically align to the top",
+            "itemtype": "property",
+            "name": "ALIGN_TOP",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "readonly": "",
+            "default": "\"top\"",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 79,
+            "description": "Vertically align to the bottom",
+            "itemtype": "property",
+            "name": "ALIGN_BOTTOM",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "readonly": "",
+            "default": "\"bottom\"",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 89,
+            "description": "Horizontally align to the left",
+            "itemtype": "property",
+            "name": "ALIGN_LEFT",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "readonly": "",
+            "default": "\"left\"",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 99,
+            "description": "Horizontally align to the right",
+            "itemtype": "property",
+            "name": "ALIGN_RIGHT",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "readonly": "",
+            "default": "\"right\"",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 109,
+            "description": "Vertically or horizontally align to the center",
+            "itemtype": "property",
+            "name": "ALIGN_CENTER",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "readonly": "",
+            "default": "\"center\"",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 119,
+            "description": "Create the scaler from JSON data",
+            "itemtype": "method",
+            "name": "fromJSON",
+            "static": 1,
+            "params": [
+                {
+                    "name": "parent",
+                    "description": "The UI display container",
+                    "type": "PIXI.DisplayObject"
+                },
+                {
+                    "name": "jsonSettings",
+                    "description": "The json of the designed settings {designedWidth:800, designedHeight:600, designedPPI:72}",
+                    "type": "Object"
+                },
+                {
+                    "name": "jsonItems",
+                    "description": "The json items object where the keys are the name of the property on the parent and the value\n       is an object with keys of \"titleSafe\", \"minScale\", \"maxScale\", \"centerHorizontally\", \"align\"",
+                    "type": "Object"
+                },
+                {
+                    "name": "immediateDestroy",
+                    "description": "If we should immediately cleanup the UIScaler after scaling items",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "true"
+                }
+            ],
+            "return": {
+                "description": "The scaler object that can be reused",
+                "type": "UIScaler"
+            },
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 182,
+            "description": "Set the current screen settings. If the stage size changes at all, re-call this function",
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "params": [
+                {
+                    "name": "screenWidth",
+                    "description": "The fullscreen width",
+                    "type": "Number"
+                },
+                {
+                    "name": "screenHeight",
+                    "description": "The fullscreen height",
+                    "type": "Number"
+                },
+                {
+                    "name": "screenPPI",
+                    "description": "The screen resolution density",
+                    "type": "Number"
+                }
+            ],
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 198,
+            "description": "Get the current scale of the screen",
+            "itemtype": "method",
+            "name": "getScale",
+            "return": {
+                "description": "The current stage scale",
+                "type": "Number"
+            },
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 208,
+            "description": "Manually add an item",
+            "itemtype": "method",
+            "name": "add",
+            "params": [
+                {
+                    "name": "item",
+                    "description": "The display object item to add",
+                    "type": "PIXI.DisplayObject"
+                },
+                {
+                    "name": "vertAlign",
+                    "description": "The vertical align of the item (cefault is center)",
+                    "type": "String",
+                    "optional": true,
+                    "optdefault": "\"center\""
+                },
+                {
+                    "name": "horiAlign",
+                    "description": "The horizontal align of the item (default is center)",
+                    "type": "String",
+                    "optional": true,
+                    "optdefault": "\"center\""
+                },
+                {
+                    "name": "titleSafe",
+                    "description": "If the item needs to be in the title safe area (default is false)",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                },
+                {
+                    "name": "minScale",
+                    "description": "The minimum scale amount (default, scales the same size as the stage)",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "1"
+                },
+                {
+                    "name": "maxScale",
+                    "description": "The maximum scale amount (default, scales the same size as the stage)",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "1"
+                },
+                {
+                    "name": "centeredHorizontally",
+                    "description": "Makes sure that the center of the object was at the center of the screen, assuming an origin at the top left of the object",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 234,
+            "description": "Scale a single background image according to the UIScaler.width and height",
+            "itemtype": "method",
+            "name": "resizeBackground",
+            "static": 1,
+            "params": [
+                {
+                    "name": "The",
+                    "description": "bitmap to scale",
+                    "type": "PIXI.Bitmap"
+                }
+            ],
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 271,
+            "description": "Convenience function to scale a collection of backgrounds",
+            "itemtype": "method",
+            "name": "resizeBackgrounds",
+            "static": 1,
+            "params": [
+                {
+                    "name": "bitmaps",
+                    "description": "The collection of bitmap images",
+                    "type": "Array"
+                }
+            ],
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 285,
+            "description": "Scale the UI items that have been registered to the current screen",
+            "itemtype": "method",
+            "name": "resize",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/scaling/UIScaler.js",
+            "line": 300,
+            "description": "Destroy the scaler object",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "UIScaler",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 15,
+            "description": "The collection of AnimTimelines that are playing",
+            "itemtype": "property",
+            "name": "_timelines",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 22,
+            "description": "The number of animations",
+            "itemtype": "property",
+            "name": "_numAnims",
+            "type": "Int",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 30,
+            "description": "Stored collection of AnimTimelines. This is internal to Animator and can't be accessed externally.",
+            "itemtype": "property",
+            "name": "_animPool",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 38,
+            "description": "The instance of cloudkid.Audio or cloudkid.Sound for playing audio along with animations.",
+            "itemtype": "property",
+            "name": "soundLib",
+            "type": "cloudkid.Audio|cloudkid.Sound",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 46,
+            "description": "The global captions object to use with animator",
+            "itemtype": "property",
+            "name": "captions",
+            "type": "cloudkid.Captions",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 53,
+            "description": "Initializes the singleton instance of Animator.",
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 64,
+            "description": "Play a specified animation",
+            "itemtype": "method",
+            "name": "play",
+            "params": [
+                {
+                    "name": "clip",
+                    "description": "The clip to play",
+                    "type": "PIXI.MovieClip|PIXI.Spine"
+                },
+                {
+                    "name": "anim",
+                    "description": "Depending on the type of clip, this could be one of several things.\n\nIf animating a MovieClip, this should be the array of Textures that is the animation (or null to use the existing array on the clip).\n\nIf animating a Spine object:\n- If anim is a string it will play that single animation by name.\n- If anim is an array of strings it will play as a list of animations (only the last one can loop).\n- If anim is an array of objects (with anim, loop, and speed properties) then multiple animations will be played simultaneously.\n   When multiple animations play, animation stops when any non looping animation ends.",
+                    "type": "String|Array"
+                },
+                {
+                    "name": "options",
+                    "description": "The object of optional parameters or onComplete callback function",
+                    "type": "Object|function",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "callback",
+                            "description": "The function to call once the animation has finished",
+                            "type": "Function",
+                            "optional": true,
+                            "optdefault": "null"
+                        },
+                        {
+                            "name": "loop",
+                            "description": "Whether the animation should loop",
+                            "type": "Bool",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "speed",
+                            "description": "The speed at which to play the animation",
+                            "type": "Int",
+                            "optional": true,
+                            "optdefault": "1"
+                        },
+                        {
+                            "name": "startTime",
+                            "description": "The time in milliseconds into the animation to start.",
+                            "type": "Int",
+                            "optional": true,
+                            "optdefault": "0"
+                        },
+                        {
+                            "name": "soundData",
+                            "description": "Data about a sound to sync the animation to, as an alias or in the format {alias:\"MyAlias\", start:0}.\n       start is the seconds into the animation to start playing the sound. If it is omitted or soundData is a string, it defaults to 0.",
+                            "type": "Object|String",
+                            "optional": true,
+                            "optdefault": "null"
+                        }
+                    ]
+                }
+            ],
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 208,
+            "description": "Checks to see if a Spine animation includes a given animation alias",
+            "itemtype": "method",
+            "name": "instanceHasAnimation",
+            "params": [
+                {
+                    "name": "instance",
+                    "description": "The animation to search. This has to be a Spine animation.",
+                    "type": "PIXI.Spine"
+                },
+                {
+                    "name": "anim",
+                    "description": "The animation alias to search for",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Returns true if the animation is found",
+                "type": "Boolean"
+            },
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 223,
+            "description": "Checks to see if a Spine animation includes a given animation alias",
+            "itemtype": "method",
+            "name": "checkSpineForAnimation",
+            "params": [
+                {
+                    "name": "clip",
+                    "description": "The spine to search",
+                    "type": "PIXI.Spine"
+                },
+                {
+                    "name": "anim",
+                    "description": "The animation alias to search for",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Returns true if the animation is found",
+                "type": "Boolean"
+            },
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 236,
+            "description": "Stop a clip",
+            "itemtype": "method",
+            "name": "stop",
+            "params": [
+                {
+                    "name": "clip",
+                    "description": "The clip to stop",
+                    "type": "PIXI.MovieClip|PIXI.Spine"
+                },
+                {
+                    "name": "doCallback",
+                    "description": "Whether the animations callback should be run",
+                    "type": "Bool"
+                }
+            ],
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 263,
+            "description": "Stops all current animations",
+            "itemtype": "method",
+            "name": "stop",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 282,
+            "description": "Put an AnimTimeline back into the general pool after it's done playing\nor has been manually stopped",
+            "itemtype": "method",
+            "name": "_repool",
+            "params": [
+                {
+                    "name": "timeline",
+                    "description": "",
+                    "type": "Animator.AnimTimeline"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 301,
+            "description": "Update each frame",
+            "itemtype": "method",
+            "name": "_update",
+            "params": [
+                {
+                    "name": "elapsed",
+                    "description": "The time since the last frame",
+                    "type": "Int"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 414,
+            "description": "Called when a movie clip is done playing, calls the AnimTimeline's\ncallback if it has one",
+            "itemtype": "method",
+            "name": "_onMovieClipDone",
+            "params": [
+                {
+                    "name": "timeline",
+                    "description": "",
+                    "type": "Animator.AnimTimeline"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 443,
+            "description": "Destroy this",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "Animator",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 475,
+            "description": "Initialize the AnimTimeline",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "clip",
+                    "description": "The AnimTimeline's clip",
+                    "type": "PIXI.MovieClip|Pixi.Spine"
+                },
+                {
+                    "name": "callback",
+                    "description": "The function to call when the clip is finished playing",
+                    "type": "Function"
+                },
+                {
+                    "name": "speed",
+                    "description": "The speed at which the clip should be played",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Animator.AnimTimeline"
+            },
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 486,
+            "description": "The clip for this AnimTimeLine",
+            "itemtype": "property",
+            "name": "clip",
+            "type": "PIXI.MovieClip|PIXI.Spine",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 493,
+            "description": "Whether the clip is a PIXI.Spine",
+            "itemtype": "property",
+            "name": "isSpine",
+            "type": "Bool",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 500,
+            "description": "The function to call when the clip is finished playing",
+            "itemtype": "property",
+            "name": "callback",
+            "type": "Function",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 507,
+            "description": "The speed at which the clip should be played",
+            "itemtype": "property",
+            "name": "speed",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 514,
+            "itemtype": "property",
+            "name": "spineStates",
+            "type": "Array",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 520,
+            "description": "Not used by Animator, but potentially useful for other code to keep track of what type of animation is being played",
+            "itemtype": "property",
+            "name": "loop",
+            "type": "Bool",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 527,
+            "description": "The position of the animation in seconds",
+            "itemtype": "property",
+            "name": "time",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 534,
+            "description": "Sound alias to sync to during the animation.",
+            "itemtype": "property",
+            "name": "soundAlias",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 541,
+            "description": "A sound instance object from cloudkid.Sound or cloudkid.Audio, used for tracking sound position.",
+            "itemtype": "property",
+            "name": "soundInst",
+            "type": "Object",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 548,
+            "description": "If the timeline will, but has yet to, play a sound",
+            "itemtype": "property",
+            "name": "playSound",
+            "type": "Bool",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 555,
+            "description": "The time (seconds) into the animation that the sound starts.",
+            "itemtype": "property",
+            "name": "soundStart",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 562,
+            "description": "The time (seconds) into the animation that the sound ends",
+            "itemtype": "property",
+            "name": "soundEnd",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 569,
+            "description": "If this timeline plays captions",
+            "itemtype": "property",
+            "name": "useCaptions",
+            "type": "Bool",
+            "readonly": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 577,
+            "description": "If this animation is paused.",
+            "itemtype": "property",
+            "name": "_paused",
+            "type": "Bool",
+            "access": "private",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Animator.js",
+            "line": 587,
+            "description": "Sets and gets the animation's paused status.",
+            "itemtype": "property",
+            "name": "paused",
+            "type": "Bool",
+            "access": "public",
+            "tagname": "",
+            "class": "Animator.AnimTimeline",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 19,
+            "description": "Dictionary of scales by asset id. Use this to return your asset to normal size.\nAssets are only added to this dictionary after a url has been retrieved with getUrl().",
+            "itemtype": "property",
+            "name": "scales",
+            "type": "Object",
+            "final": 1,
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 28,
+            "description": "The available size definitions, e.g., {\"maxSize\":400, \"order\": [\"tiny\", \"sd\"]}",
+            "itemtype": "property",
+            "name": "sizes",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 36,
+            "description": "Dictionary of assets by asset id",
+            "itemtype": "property",
+            "name": "assets",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 44,
+            "description": "The cache of asset url paths",
+            "itemtype": "property",
+            "name": "assetUrlCache",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 52,
+            "description": "The scaling value for each asset size id, e.g., {\"sd\" : 1, \"tiny\" : 2}",
+            "itemtype": "property",
+            "name": "scales",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 60,
+            "description": "The paths to each resolution folder, e.g., {\"sd\":\"images/sd/\", \"tiny\":\"images/tiny/\"}",
+            "itemtype": "property",
+            "name": "paths",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 68,
+            "description": "The collection of perferred size to load",
+            "itemtype": "property",
+            "name": "sizeOrder",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 76,
+            "description": "If we should use low hardware, if we know we're on a slow device",
+            "itemtype": "property",
+            "name": "lowHW",
+            "type": "Boolean",
+            "static": 1,
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 83,
+            "description": "Initialize the asset manager. The asset manager is capable of taking different paths for\neach size of image as well as an animation file path for Spine animations. Image assets do not\nhave to exist in each size. Fonts are marked for unloading purposes. Example config file:\n\n\t\t\t{\n\t\t\t\t\"path\": {\n\t\t\t\t\t\"sd\": \"images/sd/\",\n\t\t\t\t\t\"tiny\": \"images/tiny/\",\n\t\t\t\t\t\"anim\": \"anims/\"\n\t\t\t\t},\n\t\t\t\t\"scale\": {\n\t\t\t\t\t\"sd\": 1,\n\t\t\t\t\t\"tiny\": 2\n\t\t\t\t},\n\t\t\t\t\"sizing\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"maxSize\": 400,\n\t\t\t\t\t\t\"order\": [\n\t\t\t\t\t\t\t\"tiny\",\n\t\t\t\t\t\t\t\"sd\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"maxSize\": 10000,\n\t\t\t\t\t\t\"order\": [\n\t\t\t\t\t\t\t\"sd\",\n\t\t\t\t\t\t\t\"tiny\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"assets\": {\n\t\t\t\t\t\"transition\": {\n\t\t\t\t\t\t\"src\": \"transition.json\",\n\t\t\t\t\t\t\"anim\": true\n\t\t\t\t\t},\n\t\t\t\t\t\"TransitionSheet\": {\n\t\t\t\t\t\t\"src\": \"ui/TransitionSheet.json\",\n\t\t\t\t\t\t\"sd\":true,\n\t\t\t\t\t\t\"tiny\":true\n\t\t\t\t\t},\n\t\t\t\t\t\"FoodTruck_Title\": {\n\t\t\t\t\t\t\"src\": \"backgrounds/FoodTruck_Title.jpg\",\n\t\t\t\t\t\t\"sd\":true,\n\t\t\t\t\t\t\"tiny\":true\n\t\t\t\t\t},\n\t\t\t\t\t\"StartButton\": {\n\t\t\t\t\t\t\"src\": \"ui/StartButton.png\",\n\t\t\t\t\t\t\"sd\":true,\n\t\t\t\t\t\t\"tiny\":false\n\t\t\t\t\t},\n\t\t\t        \"LevelTitleFont\": {\n\t\t\t\t\t\t\"src\": \"ui/LevelTitleFont.xml\",\n\t\t\t\t\t\t\"sd\": true,\n\t\t\t\t\t\t\"tiny\": false,\n\t\t\t\t\t\t\"isFont\": true\n\t\t\t\t\t}\n      \t\t}",
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "The configuration file which contains keys for \"path\", \"scale\", \"sizing\", \"assets\"",
+                    "type": "Object"
+                },
+                {
+                    "name": "width",
+                    "description": "The stage width",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "The stage height",
+                    "type": "Number"
+                }
+            ],
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 159,
+            "description": "Get the alias of the preferred size to use",
+            "itemtype": "method",
+            "name": "getPreferredSize",
+            "static": 1,
+            "return": {
+                "description": "The alias for the preferred size",
+                "type": "String"
+            },
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 170,
+            "description": "Get the preferred scale amount",
+            "itemtype": "method",
+            "name": "getPreferredScale",
+            "static": 1,
+            "return": {
+                "description": "The scale amount associated with the preferred size",
+                "type": "Number"
+            },
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 181,
+            "description": "Pick the preferred scale based on the screen resolution",
+            "itemtype": "method",
+            "name": "pickScale",
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "params": [
+                {
+                    "name": "width",
+                    "description": "The stage width",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "The stage height",
+                    "type": "Number"
+                }
+            ],
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 203,
+            "description": "Get a asset url by asset id",
+            "itemtype": "method",
+            "name": "getUrl",
+            "static": 1,
+            "params": [
+                {
+                    "name": "assetId",
+                    "description": "The unique asset id",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The url of the asset at the appropriate size."
+            },
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 245,
+            "description": "Unload an asset or list of assets.",
+            "itemtype": "method",
+            "name": "unload",
+            "static": 1,
+            "params": [
+                {
+                    "name": "assetOrAsset",
+                    "description": "The collection of asset ids or single asset id",
+                    "type": "Array|String"
+                }
+            ],
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 267,
+            "description": "Unload an asset",
+            "itemtype": "method",
+            "name": "unloadAsset",
+            "static": 1,
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "asset",
+                    "description": "The asset id to unload",
+                    "type": "String"
+                }
+            ],
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/AssetManager.js",
+            "line": 291,
+            "description": "Assemble a dictionary of Texture arrays representing animations from the PixiJS texture cache.\nExample of a getAnims() call:\n\n\t\t\tvar animationDictionary = AssetManager.getAnims(\n\t\t\t\t{\n\t\t\t\t\t\"bobIdleHappy\":{\"name\":\"bob_idle_happy#\", \"numberMin\":1, \"numberMax\":139},\n\t\t\t\t\t\"bobIdleNeutral\":{\"name\":\"bob_idle_neutral#\", \"numberMin\":1, \"numberMax\":140},\n\t\t\t\t\t\"bobIdleMad\":{\"name\":\"bob_idle_mad#\", \"numberMin\":1, \"numberMax\":140},\n\t\t\t\t\t\"bobPos\":{\"name\":\"bob_react_pos#\", \"numberMin\":1, \"numberMax\":23},\n\t\t\t\t\t\"bobNeg\":{\"name\":\"bob_react_neg#\", \"numberMin\":1, \"numberMax\":31},\n\t\t\t\t},\n\t\t\t\t4);",
+            "itemtype": "method",
+            "name": "getAnims",
+            "static": 1,
+            "params": [
+                {
+                    "name": "anims",
+                    "description": "The dictionary of animation assets",
+                    "type": "Object"
+                },
+                {
+                    "name": "maxDigits",
+                    "description": "Maximum number of digits, like 4 for an animation exported as anim_0001.png",
+                    "type": "Int",
+                    "optional": true,
+                    "optdefault": "4"
+                },
+                {
+                    "name": "outObj",
+                    "description": "If already using an return object",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "An collection of PIXI.Textures for each animation id suitable for use in PIXI.MovieClip",
+                "type": "Object"
+            },
+            "class": "AssetManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 83,
+            "description": "The function that should be called when the button is released.",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "releaseCallback",
+            "type": "Function",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 90,
+            "description": "The function that should be called when the button is moused over.",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "overCallback",
+            "type": "Function",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 97,
+            "description": "The function that should be called when mouse leaves the button.",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "outCallback",
+            "type": "Function",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 104,
+            "description": "A dictionary of state booleans, keyed by state name.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_stateFlags",
+            "type": "Object",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 110,
+            "description": "An array of state names (Strings), in their order of priority.\nThe standard order previously was [\"highlighted\", \"disabled\", \"down\", \"over\", \"selected\", \"up\"].",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_statePriority",
+            "type": "Array",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 118,
+            "description": "A dictionary of state graphic data, keyed by state name.\nEach object contains the sourceRect (src) and optionally 'trim', another Rectangle.\nAdditionally, each object will contain a 'label' object if the button has a text label.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_stateData",
+            "type": "Object",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 127,
+            "description": "The current style for the label, to avoid setting this if it is unchanged.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_currentLabelStyle",
+            "type": "Object",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 134,
+            "description": "An offset to button positioning, generally used to adjust for a highlight around the button.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_offset",
+            "type": "PIXI.Point",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 170,
+            "description": "Callback for mouse up outside, bound to this button.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_upOutCB",
+            "type": "Function",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 206,
+            "description": "Constructor for the button when using PIXI.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "imageSettings",
+                    "description": "Information about the art to be used for button states, as well as if the button is selectable or not.",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "label",
+                    "description": "Information about the text label on the button. Omitting this makes the button not use a label.",
+                    "type": "Object",
+                    "optional": true,
+                    "optdefault": "null"
+                },
+                {
+                    "name": "enabled",
+                    "description": "Whether or not the button is initially enabled.",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "true"
+                }
+            ],
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 472,
+            "description": "Adds a property to the button. Setting the property sets the value in\n_stateFlags and calls _updateState().",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_addProperty",
+            "params": [
+                {
+                    "name": "propertyName",
+                    "description": "The property name to add to the button.",
+                    "type": "String"
+                }
+            ],
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 578,
+            "description": "The callback for when the button is moused over.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_onOver",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 591,
+            "description": "The callback for when the mouse leaves the button area.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_onOut",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 604,
+            "description": "The callback for when the button receives a mouse down event.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_onDown",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 619,
+            "description": "The callback for when the button for when the mouse/touch is released on the button\n- only when the button was held down initially.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_onUp",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/Button.js",
+            "line": 637,
+            "description": "The callback for when the mouse/touch is released outside the button when the button was held down.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_onUpOutside",
+            "class": "Button",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 23,
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 26,
+            "description": "The object that's being dragged",
+            "access": "public",
+            "tagname": "",
+            "readonly": "",
+            "itemtype": "property",
+            "name": "draggedObj",
+            "type": "PIXI.DisplayObject",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 34,
+            "description": "The radius in pixel to allow for dragging, or else does sticky click",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "dragStartThreshold",
+            "default": "20",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 42,
+            "description": "The position x, y of the mouse down on the stage",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "mouseDownStagePos",
+            "type": "PIXI.Point",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 49,
+            "description": "The position x, y of the object when interaction with it started.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "mouseDownObjPos",
+            "type": "PIXI.Point",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 56,
+            "description": "Is the move touch based",
+            "access": "public",
+            "tagname": "",
+            "readonly": "",
+            "itemtype": "property",
+            "name": "isTouchMove",
+            "type": "Bool",
+            "default": "false",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 65,
+            "description": "Is the drag being held on mouse down (not sticky clicking)",
+            "access": "public",
+            "tagname": "",
+            "readonly": "",
+            "itemtype": "property",
+            "name": "isHeldDrag",
+            "type": "Bool",
+            "default": "false",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 74,
+            "description": "Is the drag a sticky clicking (click on a item, then mouse the mouse)",
+            "access": "public",
+            "tagname": "",
+            "readonly": "",
+            "itemtype": "property",
+            "name": "isStickyClick",
+            "type": "Bool",
+            "default": "false",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 83,
+            "description": "If sticky click dragging is allowed.",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "allowStickyClick",
+            "type": "Bool",
+            "default": "true",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 91,
+            "description": "Settings for snapping.\n\n Format for snapping to a list of points:\n\t{\n\t\tmode:\"points\",\n\t\tdist:20,//snap when within 20 pixels/units\n\t\tpoints:[\n\t\t\t{ x: 20, y:30 },\n\t\t\t{ x: 50, y:10 }\n\t\t]\n\t}",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "snapSettings",
+            "type": "Object",
+            "default": "null",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 110,
+            "description": "Reference to the stage",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_theStage",
+            "type": "PIXI.Stage",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 117,
+            "description": "The local to global position of the drag",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_dragOffset",
+            "type": "PIXI.Point",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 124,
+            "description": "External callback when we start dragging",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_dragStartCallback",
+            "type": "Function",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 131,
+            "description": "External callback when we are done dragging",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_dragEndCallback",
+            "type": "Function",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 138,
+            "description": "Callback to test for the start a held drag",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_triggerHeldDragCallback",
+            "type": "Function",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 145,
+            "description": "Callback to start a sticky click drag",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_triggerStickyClickCallback",
+            "type": "Function",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 152,
+            "description": "Callback when we are done with the drag",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_stageMouseUpCallback",
+            "type": "Function",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 159,
+            "description": "The function call when the mouse/touch moves",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_updateCallback",
+            "type": "Function",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 166,
+            "description": "The collection of draggable objects",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "_draggableObjects",
+            "type": "Array",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 178,
+            "description": "Constructor",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "stage",
+                    "description": "The stage that this DragManager is monitoring.",
+                    "type": "PIXI.Stage"
+                },
+                {
+                    "name": "startCallback",
+                    "description": "The callback when when starting",
+                    "type": "Function"
+                },
+                {
+                    "name": "endCallback",
+                    "description": "The callback when ending",
+                    "type": "Function"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 200,
+            "description": "Manually starts dragging an object. If a mouse down event is not supplied as the second argument, it \n   defaults to a held drag, that ends as soon as the mouse is released.",
+            "itemtype": "method",
+            "name": "startDrag",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "object",
+                    "description": "The object that should be dragged.",
+                    "type": "PIXI.DisplayObject"
+                },
+                {
+                    "name": "interactionData",
+                    "description": "The interaction data about the input event that triggered this.",
+                    "type": "PIXI.InteractionData"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 213,
+            "description": "Mouse down on an obmect",
+            "itemtype": "method",
+            "name": "_objMouseDown",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The type of input that triggered this call - either TYPE_MOUSE or TYPE_TOUCH.",
+                    "type": "Int"
+                },
+                {
+                    "name": "object",
+                    "description": "The object that should be dragged.",
+                    "type": "PIXI.DisplayObject"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 255,
+            "description": "Start the sticky click",
+            "itemtype": "method",
+            "name": "_triggerStickyClick",
+            "access": "private",
+            "tagname": "",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 268,
+            "description": "Start hold dragging",
+            "itemtype": "method",
+            "name": "_triggerHeldDrag",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "interactionData",
+                    "description": "The ineraction data about the moved mouse",
+                    "type": "PIXI.InteractionData"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 287,
+            "description": "Internal start dragging on the stage",
+            "itemtype": "method",
+            "name": "_startDrag",
+            "access": "private",
+            "tagname": "",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 301,
+            "description": "Stops dragging the currently dragged object.",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "stopDrag",
+            "params": [
+                {
+                    "name": "doCallback",
+                    "description": "If the drag end callback should be called. Default is false.",
+                    "type": "Bool"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 312,
+            "description": "Internal stop dragging on the stage",
+            "itemtype": "method",
+            "name": "_stopDrag",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "ev",
+                    "description": "Mouse up event",
+                    "type": "Event"
+                },
+                {
+                    "name": "doCallback",
+                    "description": "If we should do the callback",
+                    "type": "Bool"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 335,
+            "description": "Update the object position based on the mouse",
+            "itemtype": "method",
+            "name": "_updateObjPosition",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "interactionData",
+                    "description": "Mouse move event",
+                    "type": "PIXI.InteractionData"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 371,
+            "description": "Handles snapping the dragged object to the nearest among a list of points",
+            "itemtype": "method",
+            "name": "_handlePointSnap",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "localMousePos",
+                    "description": "The mouse position in the same space as the dragged object.",
+                    "type": "createjs.Point"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 413,
+            "description": "Simple clamp function",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 440,
+            "description": "Adds properties and functions to the object - use enableDrag() and disableDrag() on \nobjects to enable/disable them (they start out disabled). Properties added to objects:\n_dragBounds (Rectangle), _onMouseDownListener (Function), _dragMan (cloudkid.DragManager) reference to the DragManager\nthese will override any existing properties of the same name",
+            "itemtype": "method",
+            "name": "addObject",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "The display object",
+                    "type": "PIXI.DisplayObject"
+                },
+                {
+                    "name": "bound",
+                    "description": "The rectangle bounds",
+                    "type": "PIXI.Rectangle"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 474,
+            "description": "Removes properties and functions added by addObject().",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "removeObject",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "The display object",
+                    "type": "PIXI.DisplayObject"
+                }
+            ],
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 496,
+            "description": "Destroy the manager",
+            "access": "public",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/DragManager.js",
+            "line": 528,
+            "class": "DragManager",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 74,
+            "description": "the canvas managed by this display",
+            "itemtype": "property",
+            "name": "canvas",
+            "type": "DOMElement",
+            "readonly": "",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 82,
+            "description": "The DOM id for the canvas",
+            "itemtype": "property",
+            "name": "id",
+            "type": "String",
+            "readonly": "",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 90,
+            "description": "Convenience method for getting the width of the canvas element\nwould be the same thing as canvas.width",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Int",
+            "readonly": "",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 99,
+            "description": "Convenience method for getting the height of the canvas element\nwould be the same thing as canvas.height",
+            "itemtype": "property",
+            "name": "height",
+            "type": "Int",
+            "readonly": "",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 108,
+            "description": "The rendering library's stage element, the root display object",
+            "itemtype": "property",
+            "name": "",
+            "type": "PIXI.Stage",
+            "readonly": "",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 116,
+            "description": "The Pixi renderer.",
+            "itemtype": "property",
+            "name": "",
+            "type": "PIXI.CanvasRenderer|PIXI.WebGLRenderer",
+            "readonly": "",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 124,
+            "description": "If rendering is paused on this display only. Pausing all displays can be done\nusing Application.paused setter.",
+            "itemtype": "property",
+            "name": "paused",
+            "type": "Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 132,
+            "description": "If input is enabled on the stage.",
+            "itemtype": "property",
+            "name": "_enabled",
+            "type": "Boolean",
+            "access": "private",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 139,
+            "description": "If input is enabled on the stage for this display. The default is true.",
+            "itemtype": "property",
+            "name": "enabled",
+            "type": "Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 163,
+            "description": "If the display is visible.",
+            "itemtype": "property",
+            "name": "_visible",
+            "type": "Boolean",
+            "access": "private",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 170,
+            "description": "If the display is visible, using \"display: none\" css on the canvas. Invisible displays won't render.",
+            "itemtype": "property",
+            "name": "visible",
+            "type": "Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 184,
+            "description": "Resizes the canvas and the renderer. This is only called by the Application.",
+            "itemtype": "method",
+            "name": "resize",
+            "internal": "",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "The width that the display should be",
+                    "type": "Int"
+                },
+                {
+                    "name": "height",
+                    "description": "The height that the display should be",
+                    "type": "Int"
+                }
+            ],
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 197,
+            "description": "Updates the stage and draws it. This is only called by the Application.\nThis method does nothing if paused is true or visible is false.",
+            "itemtype": "method",
+            "name": "render",
+            "internal": "",
+            "params": [
+                {
+                    "name": "elapsed",
+                    "description": "",
+                    "type": "Int"
+                }
+            ],
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 211,
+            "description": "Destroys the display. This method is called by the Application and should \nnot be called directly, use Application.removeDisplay(id). \nThe stage recursively removes all display objects here.",
+            "itemtype": "method",
+            "name": "destroy",
+            "internal": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:64"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:208"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src/Animator.js:208"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:223"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src/Animator.js:223"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:236"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:263"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:282"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:301"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:414"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:443"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Animator.js:475"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src/Animator.js:475"
+        },
+        {
+            "message": "unknown tag: internal",
+            "line": " src/PixiDisplay.js:184"
+        },
+        {
+            "message": "unknown tag: internal",
+            "line": " src/PixiDisplay.js:197"
+        },
+        {
+            "message": "unknown tag: internal",
+            "line": " src/PixiDisplay.js:211"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/DragManager.js:23"
+        },
+        {
+            "message": "Missing item type\nSimple clamp function",
+            "line": " src/DragManager.js:413"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/DragManager.js:528"
+        }
+    ]
+}
