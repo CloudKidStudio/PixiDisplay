@@ -26,15 +26,20 @@
 		this.id = id;
 		options = options || {};
 		this.canvas = document.getElementById(id);
+		// prevent mouse down turning into text cursor
+		this.canvas.onmousedown = function(e)
+		{
+			e.preventDefault();
+		};
 		this.width = this.canvas.width;
 		this.height = this.canvas.height;
 		this._visible = this.canvas.style.display != "none";
 		//make stage
-		this.stage = new PIXI.Stage(this.options.backgroundColor || 0);
+		this.stage = new PIXI.Stage(options.backgroundColor || 0);
 		//make the renderer
-		var transparent = !!this.options.transparent || false;
-		var preMultAlpha = !!this.options.preMultAlpha || false;
-		if(this.options.forceContext == "canvas2d")
+		var transparent = !!options.transparent || false;
+		var preMultAlpha = !!options.preMultAlpha || false;
+		if(options.forceContext == "canvas2d")
 		{
 			this.renderer = new PIXI.CanvasRenderer(
 				this.width, 
@@ -43,7 +48,7 @@
 				transparent
 			);
 		}
-		else if(this.options.forceContext == "webgl")
+		else if(options.forceContext == "webgl")
 		{
 			this.renderer = new PIXI.WebGLRenderer(
 				this.width, 
@@ -148,14 +153,14 @@
 			this._enabled = value;
 			if(value)
 			{
-				stage.setInteractive(true);
+				this.stage.setInteractive(true);
 			}
 			else
 			{
-				stage.setInteractive(false);
+				this.stage.setInteractive(false);
 				// force an update that disables the whole stage (the stage doesn't 
 				// update the interaction manager if interaction is false)
-				stage.forceUpdateInteraction();
+				this.stage.forceUpdateInteraction();
 			}
 		}
 	});
@@ -221,6 +226,7 @@
 		this.stage.removeChildren(true);
 		this.stage.destroy();
 		this.renderer.destroy();
+		this.canvas.onmousedown = null;
 		this.renderer = this.stage = this.canvas = null;
 	};
 
