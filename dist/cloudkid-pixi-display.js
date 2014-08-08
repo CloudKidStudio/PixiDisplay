@@ -66,7 +66,7 @@
 				preMultAlpha
 			);
 		}
-		this.renderer.clearView = !!this.options.clearView;
+		this.renderer.clearView = !!options.clearView;
 		this.enabled = true;//enable mouse/touch input
 	};
 
