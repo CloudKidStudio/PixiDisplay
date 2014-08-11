@@ -72,6 +72,13 @@
 		}
 		this.renderer.clearView = !!options.clearView;
 		this.enabled = true;//enable mouse/touch input
+		/**
+		*  The Animator class to use when using this display.
+		*  @property {Animator} Animator
+		*  @readOnly
+		*  @public
+		*/
+		this.Animator = cloudkid.pixi.Animator;
 	};
 
 	var p = PixiDisplay.prototype = {};
