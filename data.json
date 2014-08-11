@@ -240,7 +240,7 @@
             "module": "cloudkid",
             "namespace": "",
             "file": "src/Animator.js",
-            "line": 458,
+            "line": 461,
             "description": "Internal Animator class for keeping track of animations. AnimTimelines are pooled internally,\nso please only keep references to them while they are actively playing an animation.",
             "is_constructor": 1,
             "params": [
@@ -1261,7 +1261,7 @@
                     "optional": true,
                     "props": [
                         {
-                            "name": "callback",
+                            "name": "onComplete",
                             "description": "The function to call once the animation has finished",
                             "type": "Function",
                             "optional": true,
@@ -1303,7 +1303,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 208,
+            "line": 211,
             "description": "Checks to see if a Spine animation includes a given animation alias",
             "itemtype": "method",
             "name": "instanceHasAnimation",
@@ -1328,7 +1328,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 223,
+            "line": 226,
             "description": "Checks to see if a Spine animation includes a given animation alias",
             "itemtype": "method",
             "name": "checkSpineForAnimation",
@@ -1353,7 +1353,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 236,
+            "line": 239,
             "description": "Stop a clip",
             "itemtype": "method",
             "name": "stop",
@@ -1374,7 +1374,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 263,
+            "line": 266,
             "description": "Stops all current animations",
             "itemtype": "method",
             "name": "stop",
@@ -1383,7 +1383,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 282,
+            "line": 285,
             "description": "Put an AnimTimeline back into the general pool after it's done playing\nor has been manually stopped",
             "itemtype": "method",
             "name": "_repool",
@@ -1401,7 +1401,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 301,
+            "line": 304,
             "description": "Update each frame",
             "itemtype": "method",
             "name": "_update",
@@ -1419,7 +1419,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 414,
+            "line": 417,
             "description": "Called when a movie clip is done playing, calls the AnimTimeline's\ncallback if it has one",
             "itemtype": "method",
             "name": "_onMovieClipDone",
@@ -1437,7 +1437,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 443,
+            "line": 446,
             "description": "Destroy this",
             "itemtype": "method",
             "name": "destroy",
@@ -1446,7 +1446,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 475,
+            "line": 478,
             "description": "Initialize the AnimTimeline",
             "itemtype": "method",
             "name": "init",
@@ -1476,7 +1476,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 486,
+            "line": 489,
             "description": "The clip for this AnimTimeLine",
             "itemtype": "property",
             "name": "clip",
@@ -1488,7 +1488,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 493,
+            "line": 496,
             "description": "Whether the clip is a PIXI.Spine",
             "itemtype": "property",
             "name": "isSpine",
@@ -1500,7 +1500,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 500,
+            "line": 503,
             "description": "The function to call when the clip is finished playing",
             "itemtype": "property",
             "name": "callback",
@@ -1512,7 +1512,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 507,
+            "line": 510,
             "description": "The speed at which the clip should be played",
             "itemtype": "property",
             "name": "speed",
@@ -1524,7 +1524,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 514,
+            "line": 517,
             "itemtype": "property",
             "name": "spineStates",
             "type": "Array",
@@ -1535,7 +1535,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 520,
+            "line": 523,
             "description": "Not used by Animator, but potentially useful for other code to keep track of what type of animation is being played",
             "itemtype": "property",
             "name": "loop",
@@ -1547,7 +1547,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 527,
+            "line": 530,
             "description": "The position of the animation in seconds",
             "itemtype": "property",
             "name": "time",
@@ -1559,7 +1559,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 534,
+            "line": 537,
             "description": "Sound alias to sync to during the animation.",
             "itemtype": "property",
             "name": "soundAlias",
@@ -1571,7 +1571,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 541,
+            "line": 544,
             "description": "A sound instance object from cloudkid.Sound or cloudkid.Audio, used for tracking sound position.",
             "itemtype": "property",
             "name": "soundInst",
@@ -1583,7 +1583,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 548,
+            "line": 551,
             "description": "If the timeline will, but has yet to, play a sound",
             "itemtype": "property",
             "name": "playSound",
@@ -1595,7 +1595,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 555,
+            "line": 558,
             "description": "The time (seconds) into the animation that the sound starts.",
             "itemtype": "property",
             "name": "soundStart",
@@ -1607,7 +1607,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 562,
+            "line": 565,
             "description": "The time (seconds) into the animation that the sound ends",
             "itemtype": "property",
             "name": "soundEnd",
@@ -1619,7 +1619,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 569,
+            "line": 572,
             "description": "If this timeline plays captions",
             "itemtype": "property",
             "name": "useCaptions",
@@ -1630,7 +1630,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 577,
+            "line": 580,
             "description": "If this animation is paused.",
             "itemtype": "property",
             "name": "_paused",
@@ -1642,7 +1642,7 @@
         },
         {
             "file": "src/Animator.js",
-            "line": 587,
+            "line": 590,
             "description": "Sets and gets the animation's paused status.",
             "itemtype": "property",
             "name": "paused",
@@ -2827,51 +2827,51 @@
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:208"
+            "line": " src/Animator.js:211"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/Animator.js:208"
+            "line": " src/Animator.js:211"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:223"
+            "line": " src/Animator.js:226"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/Animator.js:223"
+            "line": " src/Animator.js:226"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:236"
+            "line": " src/Animator.js:239"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:263"
+            "line": " src/Animator.js:266"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:282"
+            "line": " src/Animator.js:285"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:301"
+            "line": " src/Animator.js:304"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:414"
+            "line": " src/Animator.js:417"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:443"
+            "line": " src/Animator.js:446"
         },
         {
             "message": "replacing incorrect tag: function with method",
-            "line": " src/Animator.js:475"
+            "line": " src/Animator.js:478"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/Animator.js:475"
+            "line": " src/Animator.js:478"
         },
         {
             "message": "unknown tag: internal",
