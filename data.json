@@ -2621,7 +2621,20 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 74,
+            "line": 75,
+            "description": "The Animator class to use when using this display.",
+            "itemtype": "property",
+            "name": "Animator",
+            "type": "Animator",
+            "readonly": "",
+            "access": "public",
+            "tagname": "",
+            "class": "PixiDisplay",
+            "module": "cloudkid"
+        },
+        {
+            "file": "src/PixiDisplay.js",
+            "line": 86,
             "description": "the canvas managed by this display",
             "itemtype": "property",
             "name": "canvas",
@@ -2634,7 +2647,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 82,
+            "line": 94,
             "description": "The DOM id for the canvas",
             "itemtype": "property",
             "name": "id",
@@ -2647,7 +2660,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 90,
+            "line": 102,
             "description": "Convenience method for getting the width of the canvas element\nwould be the same thing as canvas.width",
             "itemtype": "property",
             "name": "width",
@@ -2660,7 +2673,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 99,
+            "line": 111,
             "description": "Convenience method for getting the height of the canvas element\nwould be the same thing as canvas.height",
             "itemtype": "property",
             "name": "height",
@@ -2673,7 +2686,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 108,
+            "line": 120,
             "description": "The rendering library's stage element, the root display object",
             "itemtype": "property",
             "name": "",
@@ -2686,7 +2699,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 116,
+            "line": 128,
             "description": "The Pixi renderer.",
             "itemtype": "property",
             "name": "",
@@ -2699,7 +2712,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 124,
+            "line": 136,
             "description": "If rendering is paused on this display only. Pausing all displays can be done\nusing Application.paused setter.",
             "itemtype": "property",
             "name": "paused",
@@ -2711,7 +2724,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 132,
+            "line": 144,
             "description": "If input is enabled on the stage.",
             "itemtype": "property",
             "name": "_enabled",
@@ -2723,7 +2736,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 139,
+            "line": 151,
             "description": "If input is enabled on the stage for this display. The default is true.",
             "itemtype": "property",
             "name": "enabled",
@@ -2735,7 +2748,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 163,
+            "line": 175,
             "description": "If the display is visible.",
             "itemtype": "property",
             "name": "_visible",
@@ -2747,7 +2760,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 170,
+            "line": 182,
             "description": "If the display is visible, using \"display: none\" css on the canvas. Invisible displays won't render.",
             "itemtype": "property",
             "name": "visible",
@@ -2759,7 +2772,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 184,
+            "line": 196,
             "description": "Resizes the canvas and the renderer. This is only called by the Application.",
             "itemtype": "method",
             "name": "resize",
@@ -2781,7 +2794,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 197,
+            "line": 209,
             "description": "Updates the stage and draws it. This is only called by the Application.\nThis method does nothing if paused is true or visible is false.",
             "itemtype": "method",
             "name": "render",
@@ -2798,7 +2811,7 @@
         },
         {
             "file": "src/PixiDisplay.js",
-            "line": 211,
+            "line": 223,
             "description": "Destroys the display. This method is called by the Application and should \nnot be called directly, use Application.removeDisplay(id). \nThe stage recursively removes all display objects here.",
             "itemtype": "method",
             "name": "destroy",
@@ -2862,15 +2875,15 @@
         },
         {
             "message": "unknown tag: internal",
-            "line": " src/PixiDisplay.js:184"
+            "line": " src/PixiDisplay.js:196"
         },
         {
             "message": "unknown tag: internal",
-            "line": " src/PixiDisplay.js:197"
+            "line": " src/PixiDisplay.js:209"
         },
         {
             "message": "unknown tag: internal",
-            "line": " src/PixiDisplay.js:211"
+            "line": " src/PixiDisplay.js:223"
         },
         {
             "message": "Missing item type",

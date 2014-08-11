@@ -135,15 +135,20 @@
 		this.id = id;
 		options = options || {};
 		this.canvas = document.getElementById(id);
+		// prevent mouse down turning into text cursor
+		this.canvas.onmousedown = function(e)
+		{
+			e.preventDefault();
+		};
 		this.width = this.canvas.width;
 		this.height = this.canvas.height;
 		this._visible = this.canvas.style.display != &quot;none&quot;;
 		//make stage
-		this.stage = new PIXI.Stage(this.options.backgroundColor || 0);
+		this.stage = new PIXI.Stage(options.backgroundColor || 0);
 		//make the renderer
-		var transparent = !!this.options.transparent || false;
-		var preMultAlpha = !!this.options.preMultAlpha || false;
-		if(this.options.forceContext == &quot;canvas2d&quot;)
+		var transparent = !!options.transparent || false;
+		var preMultAlpha = !!options.preMultAlpha || false;
+		if(options.forceContext == &quot;canvas2d&quot;)
 		{
 			this.renderer = new PIXI.CanvasRenderer(
 				this.width, 
@@ -152,7 +157,7 @@
 				transparent
 			);
 		}
-		else if(this.options.forceContext == &quot;webgl&quot;)
+		else if(options.forceContext == &quot;webgl&quot;)
 		{
 			this.renderer = new PIXI.WebGLRenderer(
 				this.width, 
@@ -174,8 +179,15 @@
 				preMultAlpha
 			);
 		}
-		this.renderer.clearView = !!this.options.clearView;
+		this.renderer.clearView = !!options.clearView;
 		this.enabled = true;//enable mouse/touch input
+		/**
+		*  The Animator class to use when using this display.
+		*  @property {Animator} Animator
+		*  @readOnly
+		*  @public
+		*/
+		this.Animator = cloudkid.pixi.Animator;
 	};
 
 	var p = PixiDisplay.prototype = {};
@@ -257,14 +269,14 @@
 			this._enabled = value;
 			if(value)
 			{
-				stage.setInteractive(true);
+				this.stage.setInteractive(true);
 			}
 			else
 			{
-				stage.setInteractive(false);
+				this.stage.setInteractive(false);
 				// force an update that disables the whole stage (the stage doesn&#x27;t 
 				// update the interaction manager if interaction is false)
-				stage.forceUpdateInteraction();
+				this.stage.forceUpdateInteraction();
 			}
 		}
 	});
@@ -330,6 +342,7 @@
 		this.stage.removeChildren(true);
 		this.stage.destroy();
 		this.renderer.destroy();
+		this.canvas.onmousedown = null;
 		this.renderer = this.stage = this.canvas = null;
 	};
 
