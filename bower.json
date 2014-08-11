@@ -1,5 +1,5 @@
 {
-	"name": "cloudkid-pixijs-display",
+	"name": "cloudkid-pixi-display",
 	"version": "0.0.1",
 	"main": "dist/cloudkid-pixi-display.min.js",
 	"dependencies": {
