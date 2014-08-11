@@ -321,7 +321,7 @@
 	* - If anim is an array of objects (with anim, loop, and speed properties) then multiple animations will be played simultaneously.
 	*    When multiple animations play, animation stops when any non looping animation ends.
 	* @param {Object|function} [options] The object of optional parameters or onComplete callback function
-	* @param {function} [options.callback=null] The function to call once the animation has finished
+	* @param {function} [options.onComplete=null] The function to call once the animation has finished
 	* @param {bool} [options.loop=false] Whether the animation should loop
 	* @param {int} [options.speed=1] The speed at which to play the animation
 	* @param {int} [options.startTime=0] The time in milliseconds into the animation to start.
@@ -337,7 +337,11 @@
 			callback = options;
 			options = {};
 		}
-		else if (!options)
+		else if(options)
+		{
+			callback = options.onComplete || null;
+		}
+		else
 		{
 			options = {};
 		}
@@ -349,7 +353,6 @@
 		}
 		
 		Animator.stop(clip);
-		callback = options.callback || callback || null;
 		loop = options.loop || loop || false;
 		speed = options.speed || speed || 1;
 		startTime = options.startTime || startTime;
