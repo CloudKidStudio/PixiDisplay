@@ -252,7 +252,7 @@
 				var t = _timelines[i];
 				_timelines.splice(i, 1);
 				if(--_numAnims === 0)
-					cloudkid.Application.instance.off(_update);
+					cloudkid.Application.instance.off("update", _update);
 				if(doCallback && t.callback)
 					t.callback();
 				if(t.soundInst)
@@ -278,7 +278,7 @@
 				_repool(t);
 				break;
 		}		
-		cloudkid.Application.instance.off(_update);
+		cloudkid.Application.instance.off("update", _update);
 		_timelines.length = _numAnims = 0;
 	};
 	
@@ -398,7 +398,7 @@
 			}
 		}
 		if(_numAnims === 0)
-			cloudkid.Application.instance.off(_update);
+			cloudkid.Application.instance.off("update", _update);
 	};
 	
 	var onSoundStarted = function(timeline)
@@ -434,7 +434,7 @@
 				t.clip.onComplete = null;
 				_timelines.splice(i, 1);
 				if(--_numAnims === 0)
-					cloudkid.Application.instance.off(_update);
+					cloudkid.Application.instance.off("update", _update);
 				if(t.callback)
 					t.callback();
 				_repool(t);
@@ -454,7 +454,7 @@
 		_instance = null;
 		_animPool = null;
 		_timelines = null;
-		cloudkid.Application.instance.off(_update);
+		cloudkid.Application.instance.off("update", _update);
 		_boundUpdate = null;
 	};
 	
