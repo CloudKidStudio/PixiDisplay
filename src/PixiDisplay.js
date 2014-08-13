@@ -204,6 +204,7 @@
 	{
 		this.width = this.canvas.width = width;
 		this.height = this.canvas.height = height;
+		this.renderer.resize(width, height);
 	};
 
 	/** 
