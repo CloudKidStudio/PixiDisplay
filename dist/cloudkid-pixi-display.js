@@ -3229,5 +3229,5 @@
 	};
 	
 	namespace('cloudkid').UIScaler = UIScaler;
-	namespace('cloudkid,pixi').UIScaler = UIScaler;
+	namespace('cloudkid.pixi').UIScaler = UIScaler;
 }());
