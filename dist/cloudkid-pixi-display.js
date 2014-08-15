@@ -2552,7 +2552,9 @@
 		else if(hitArea.type == "ellipse")
 			return new PIXI.Ellipse((hitArea.x - hitArea.w * 0.5) * scale, (hitArea.y - hitArea.h * 0.5) * scale, hitArea.w * scale, hitArea.h * scale);//convert center to upper left corner
 		else if(hitArea.type == "circle")
-			return new PIXI.Circle(hitArea.x * scale, hitArea.y * scale, hitArea.r * scale);//x & y are center, pixi documentation lies
+			return new PIXI.Circle(hitArea.x * scale, hitArea.y * scale, hitArea.r * scale);
+		else if(hitArea.type == "sector")
+			return new PIXI.Sector(hitArea.x * scale, hitArea.y * scale, hitArea.r * scale, hitArea.start, hitArea.end);
 		return null;
 	};
 
