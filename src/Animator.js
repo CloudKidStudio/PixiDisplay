@@ -6,7 +6,7 @@
 	"use strict";
 
 	/**
-	*  [PIXI Only] Animator for interacting with Spine animations
+	*  Animator for interacting with Spine animations
 	*  @class Animator
 	*  @static
 	*/
