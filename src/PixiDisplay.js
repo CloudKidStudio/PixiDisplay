@@ -14,12 +14,15 @@
 	*	@param {String} id The id of the canvas element on the page to draw to.
 	*	@param {Object} options The setup data for the Pixi stage.
 	*	@param {String} [options.forceContext=null] If a specific renderer should be used instead of WebGL 
-	*					falling back to Canvas. Use "webgl" or "canvas2d" to specify a renderer.
+	*	                                            falling back to Canvas. Use "webgl" or "canvas2d" to specify a renderer.
 	*	@param {Boolean} [options.clearView=false] If the stage should wipe the canvas between renders.
 	*	@param {uint} [options.backgroundColor=0x000000] The background color of the stage (if it is not transparent).
 	*	@param {Boolean} [options.transparent=false] If the stage should be transparent.
+	*	@param {Boolean} [options.antiAlias=false] If the WebGL renderer should use anti-aliasing.
 	*	@param {Boolean} [options.preMultAlpha=false] If the WebGL renderer should draw with all images as pre-multiplied alpha.
-	*				In most cases, you probably do not want to set this option to true.
+	*	                                              In most cases, you probably do not want to set this option to true.
+	*	@param {Boolean} [options.preserveDrawingBuffer=false] Set this to true if you want to call toDataUrl
+	*	                                                       on the WebGL rendering context.
 	*/
 	var PixiDisplay = function(id, options)
 	{
@@ -37,8 +40,12 @@
 		//make stage
 		this.stage = new PIXI.Stage(options.backgroundColor || 0);
 		//make the renderer
-		var transparent = !!options.transparent || false;
-		var preMultAlpha = !!options.preMultAlpha || false;
+		var preMultAlpha = !!options.preMultAlpha;
+		var transparent = !!options.transparent;
+		var antiAlias = !!options.antiAlias;
+		var preserveDrawingBuffer = !!options.preserveDrawingBuffer;
+		if(transparent && !preMultAlpha)
+			transparent = "notMultiplied";
 		if(options.forceContext == "canvas2d")
 		{
 			this.renderer = new PIXI.CanvasRenderer(
@@ -55,8 +62,8 @@
 				this.height,
 				this.canvas, 
 				transparent,
-				false,//antialias, not all browsers may support it
-				preMultAlpha
+				antiAlias,//antiAlias, not all browsers may support it
+				preserveDrawingBuffer
 			);
 		}
 		else
