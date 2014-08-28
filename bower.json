@@ -4,7 +4,7 @@
 	"main": "dist/cloudkid-pixi-display.min.js",
 	"dependencies": {
 		"cloudkid-framework": "*",
-		"pixi.js": "https://github.com/CloudKidStudio/pixi.js.git^1.6.2"
+		"pixi.js": "https://github.com/CloudKidStudio/pixi.js.git#^1.6.2"
 	},
 	"ignore": [
 		"Gruntfile.js",
