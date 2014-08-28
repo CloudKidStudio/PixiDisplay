@@ -79,6 +79,7 @@
 		}
 		this.renderer.clearView = !!options.clearView;
 		this.enabled = true;//enable mouse/touch input
+		this.isWebGL = this.renderer instanceof PIXI.WebGLRenderer;
 		/**
 		*  The Animator class to use when using this display.
 		*  @property {Animator} Animator
@@ -139,6 +140,14 @@
 	*  @public
 	*/
 	p.renderer = null;
+
+	/**
+	*  If Pixi is being rendered with WebGL.
+	*  @property {Boolean}
+	*  @readOnly
+	*  @public
+	*/
+	p.isWebGL = null;
 
 	/**
 	*  If rendering is paused on this display only. Pausing all displays can be done

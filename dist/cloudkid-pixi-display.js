@@ -80,6 +80,7 @@
 		}
 		this.renderer.clearView = !!options.clearView;
 		this.enabled = true;//enable mouse/touch input
+		this.isWebGL = this.renderer instanceof PIXI.WebGLRenderer;
 		/**
 		*  The Animator class to use when using this display.
 		*  @property {Animator} Animator
@@ -140,6 +141,14 @@
 	*  @public
 	*/
 	p.renderer = null;
+
+	/**
+	*  If Pixi is being rendered with WebGL.
+	*  @property {Boolean}
+	*  @readOnly
+	*  @public
+	*/
+	p.isWebGL = null;
 
 	/**
 	*  If rendering is paused on this display only. Pausing all displays can be done
@@ -1531,7 +1540,7 @@
 	{
 		this.mousedown = this.touchstart = this.mouseover = this.mouseout = null;
 		this.mouseup = this.touchend = this.mouseupoutside = this.touchendoutside = null;
-		this.removeChildren(true);
+		this.removeChildren();
 		this.label = null;
 		this.back = null;
 		this.releaseCallback = null;

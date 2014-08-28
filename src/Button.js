@@ -657,7 +657,7 @@
 	{
 		this.mousedown = this.touchstart = this.mouseover = this.mouseout = null;
 		this.mouseup = this.touchend = this.mouseupoutside = this.touchendoutside = null;
-		this.removeChildren(true);
+		this.removeChildren();
 		this.label = null;
 		this.back = null;
 		this.releaseCallback = null;
