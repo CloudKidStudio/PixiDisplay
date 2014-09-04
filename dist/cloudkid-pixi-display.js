@@ -2486,7 +2486,7 @@
 	*/
 	Positioner.positionItems = function(parent, itemSettings)
 	{
-		var rot, pt, degToRad = Math.PI / 180;
+		var pt, degToRad = Math.PI / 180;
 		for(var iName in itemSettings)
 		{
 			var item = parent[iName];
@@ -2496,8 +2496,10 @@
 				continue;
 			}
 			var setting = itemSettings[iName];
-			item.position.x = setting.x;
-			item.position.y = setting.y;
+			if(setting.x !== undefined)
+				item.position.x = setting.x;
+			if(setting.y !== undefined)
+				item.position.y = setting.y;
 			pt = setting.scale;
 			if(pt)
 			{
@@ -2510,9 +2512,8 @@
 				item.pivot.x = pt.x;
 				item.pivot.y = pt.y;
 			}
-			rot = setting.rotation;
-			if(rot)
-				item.rotation = rot * degToRad;//Pixi rotations are in radians
+			if(setting.rotation !== undefined)
+				item.rotation = setting.rotation * degToRad;//Pixi rotations are in radians
 			//item.name = iName;
 			if(setting.hitArea)
 			{
